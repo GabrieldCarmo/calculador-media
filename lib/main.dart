@@ -69,6 +69,17 @@ class _HomeState extends State<Home> {
     });
   }
 
+  void _limpar(){
+    nota1Controller.clear();
+    nota2Controller.clear();
+    nota3Controller.clear();
+    nota4Controller.clear();
+
+    setState(() {
+      _infoText = "Informe suas notas";
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -146,6 +157,20 @@ class _HomeState extends State<Home> {
                     'Calcular Média',
                     style: TextStyle(fontSize: 20.0),
                   ),
+                ),
+              ),
+            ),
+            Container(
+              height: 45.0,
+              child: ElevatedButton(
+                onPressed: _limpar,
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Color(0xFFE0EAE7),
+                  foregroundColor: Color(0xFF145A52),
+                ),
+                child: Text(
+                  'Limpar',
+                  style: TextStyle(fontSize: 18.0),
                 ),
               ),
             ),
