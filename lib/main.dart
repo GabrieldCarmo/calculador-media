@@ -132,6 +132,34 @@ class _HomeState extends State<Home> {
               style: TextStyle(color: Color(0xFF263B38), fontSize: 20.0),
               controller: nota4Controller,
             ),
+            Padding(
+              padding: EdgeInsets.only(top: 20.0, bottom: 10.0),
+              child: Container(
+                height: 48.0,
+                child: ElevatedButton(
+                  onPressed: _calcular,
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Color(0xFF145A52),
+                    foregroundColor: Colors.white,
+                  ),
+                  child: Text(
+                    'Calcular Média',
+                    style: TextStyle(fontSize: 20.0),
+                  ),
+                ),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.only(top: 20.0),
+              child: Text(
+                _infoText,
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: Color(0xFF263B38),
+                  fontSize: 20.0,
+                ),
+              ),
+            ),
           ],
         ),
       ),
