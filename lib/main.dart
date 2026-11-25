@@ -16,6 +16,11 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
 
+  TextEditingController nota1Controller = TextEditingController();
+  TextEditingController nota2Controller = TextEditingController();
+  TextEditingController nota3Controller = TextEditingController();
+  TextEditingController nota4Controller = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,7 +36,54 @@ class _HomeState extends State<Home> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-
+            TextField(
+              keyboardType: TextInputType.numberWithOptions(decimal: true),
+              decoration: InputDecoration(
+                labelText: "Primeira nota",
+                labelStyle: TextStyle(color: Color(0xFF145A52)),
+                filled: true,
+                fillColor: Colors.white,
+              ),
+              textAlign: TextAlign.center,
+              style: TextStyle(color: Color(0xFF263B38), fontSize: 20.0),
+              controller: nota1Controller,
+            ),
+            TextField(
+              keyboardType: TextInputType.numberWithOptions(decimal: true),
+              decoration: InputDecoration(
+                labelText: "Segunda nota",
+                labelStyle: TextStyle(color: Color(0xFF145A52)),
+                filled: true,
+                fillColor: Colors.white,
+              ),
+              textAlign: TextAlign.center,
+              style: TextStyle(color: Color(0xFF263B38), fontSize: 20.0),
+              controller: nota2Controller,
+            ),
+            TextField(
+              keyboardType: TextInputType.numberWithOptions(decimal: true),
+              decoration: InputDecoration(
+                labelText: "Terceira nota",
+                labelStyle: TextStyle(color: Color(0xFF145A52)),
+                filled: true,
+                fillColor: Colors.white,
+              ),
+              textAlign: TextAlign.center,
+              style: TextStyle(color: Color(0xFF263B38), fontSize: 20.0),
+              controller: nota3Controller,
+            ),
+            TextField(
+              keyboardType: TextInputType.numberWithOptions(decimal: true),
+              decoration: InputDecoration(
+                labelText: "Quarta nota",
+                labelStyle: TextStyle(color: Color(0xFF145A52)),
+                filled: true,
+                fillColor: Colors.white,
+              ),
+              textAlign: TextAlign.center,
+              style: TextStyle(color: Color(0xFF263B38), fontSize: 20.0),
+              controller: nota4Controller,
+            ),
           ],
         ),
       ),
